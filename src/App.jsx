@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import FormularioPeliculas from "./components/FormularioPeliculas";
+import CardPelicula from "./components/CardPelicula";
 
 function App() {
   return (
@@ -17,6 +18,12 @@ function App() {
       <Container className="py-4">
         <h2 className="display-2">Películas disponibles</h2>
         <hr />
+        <Row className="g-3 ">
+          <CardPelicula nombre="Pelicula" genero="Comedia" descripcion="Esta es la descripcion de la pelicula" ></CardPelicula>
+          <CardPelicula nombre="Pelicula" genero="Comedia" descripcion="Esta es la descripcion de la pelicula" ></CardPelicula>
+          <CardPelicula nombre="Pelicula" genero="Comedia" descripcion="Esta es la descripcion de la pelicula" ></CardPelicula>
+          <CardPelicula nombre="Pelicula" genero="Comedia" descripcion="Esta es la descripcion de la pelicula" ></CardPelicula>
+        </Row>
       </Container>
       <Container fluid className="text-center text-bg-dark py-5 mt-5">
         <footer>
