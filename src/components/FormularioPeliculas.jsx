@@ -12,16 +12,17 @@ class Pelicula {
 }
 
 const FormularioPeliculas = () => {
+    const peliculasLocalStorage = JSON.parse(localStorage.getItem("listaPeliculas")) || []
     const [nombre, setNombre] = useState("");
     const [descripcion, setDescripcion] = useState("");
     const [genero, setGenero] = useState("");
-    const [peliculas, setPeliculas] = useState([]);
+    const [peliculas, setPeliculas] = useState(peliculasLocalStorage);
     const [nombreNoValido, setNombreNoValido] = useState(false);
     const [descripcionNoValida, setDescripcionNoValida] = useState(false);
     const [generoNoValido, setGeneroNoValido] = useState(false);
 
     useEffect(() => {
-        console.log(peliculas);
+        localStorage.setItem("listaPeliculas",JSON.stringify(peliculas)); 
     }, [peliculas]);
 
     const handleSubmit = (e) => {
